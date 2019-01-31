@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { connect } from 'react-redux'
 
 class Account extends React.Component{
 render(){
@@ -8,7 +9,7 @@ return(
       <h3 class="ui block header">
         ACCOUNT
       </h3>
-  <i class="massive rupee sign icon">5000</i>
+        <i class="massive rupee sign icon">{this.props.totalAmount}</i>
   </div>
 )
 
@@ -16,4 +17,10 @@ return(
 
 }
 
-export default Account
+const mapPropsToState = (state) => {
+
+    return {
+        totalAmount: state.account
+    }
+}
+export default connect(mapPropsToState)(Account)

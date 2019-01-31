@@ -1,6 +1,6 @@
-export const policyAction =({name , amount})=>{
+ const policyAction =({name , amount})=>{
   return({
-      type:POLICY_ACTION,
+      type:'POLICY_ACTION',
       payload:{
         name: name,
         amount:amount
@@ -9,3 +9,5 @@ export const policyAction =({name , amount})=>{
 
   })
 }
+
+export default policyAction

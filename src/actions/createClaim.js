@@ -1,9 +1,11 @@
-export const claimAction=({name, amount})=>{
+const claimAction=({name, amount})=>{
 return({
-type:CLAIM_ACTION,
-payload:{
-  name:name,
-  amount:amount
-}
-})
-}
+    type:'CLAIM_ACTION',
+    payload:{
+        name:name,
+        amount:amount
+    }
+    })
+    }
+
+export default claimAction
